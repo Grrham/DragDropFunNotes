@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App with Snake Easter Egg</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        html {
+            font-family: 'Poppins';
+            font-size: small;
+        }
+
+        /* Styling for the Notes App */
+        .note {
+            position: absolute;
+            cursor: grab;
+            background-color: whitesmoke;
+            border: 1.5px solid #000;
+            padding: 5px;
+            border-radius: 8px;
+            color: black;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 black, 0 -1px whites;
+            filter: drop-shadow(0.1rem 0.15rem 3px black);
+        }
+
+        .note:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0.15rem 0.2rem 3px black);
+        }
+
+        .note:active {
+            cursor: grabbing;
+            transform: translateY(-5px);
+            filter: drop-shadow(0.2rem 0.4rem 2px black);
+        }
+
+        input[type="text"] {
+            width: 200px;
+            background-color: gainsboro;
+            border: 2px solid gray;
+        }
+
+        input[type="text"],
+        button {
+            padding: 8px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: gray;
+            color: white;
+            box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.35);
+        }
+
+        button:active { 
+            transform: scale(0.95); 
+            box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.3); 
+        }
+
+        p {
+            position: absolute;
+            bottom: 5px;
+            animation: blink 5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+
+        #gameContainer {
+            display: none;
+        }
+
+        #gameCanvas {
+            border: 1.5px solid black;
+            border-radius: 8px;
+            filter: drop-shadow(.2rem .2rem 5px black);
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Notes App -->
+    <input id="noteInput" type="text" placeholder="Type note here...">
+    <button onclick="addNote()">Add Note</button>
+    <button onclick="removeLastNote()">Delete Last</button>
+
+    <p>Create a note called .snake, and double click it ;)</p>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
