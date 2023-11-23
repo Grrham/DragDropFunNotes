@@ -212,5 +212,7 @@ function startSnakeGame() {
 }
 
 // need to comment the code more, as well as you need a bit better usage of an object in this one, but due to the difficulty of the app I wont be too picky.
+// the app functions really well, good job on this, a very clean and well put together app
+// this style of programming is called procedural, this code needs abit more formatting and comments, but would make a great project to demonstrate procedural programming
 
 
