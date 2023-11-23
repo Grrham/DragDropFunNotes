@@ -1,3 +1,4 @@
+
 function addNote() {
     let noteText = document.getElementById('noteInput').value;
     if (noteText.trim() !== '') {
@@ -24,7 +25,7 @@ function removeLastNote() {
 }
 }
 
-function createNoteElement(noteText) {
+function createNoteElement(noteText) { // good use of parameters here
     let note = document.createElement('div');
     note.className = 'note';
     note.innerHTML = noteText;
@@ -209,3 +210,7 @@ function startSnakeGame() {
         }
     });
 }
+
+// need to comment the code more, as well as you need a bit better usage of an object in this one, but due to the difficulty of the app I wont be too picky.
+
+
