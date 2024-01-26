@@ -91,11 +91,9 @@ function loadNotesFromStorage() {
 
 loadNotesFromStorage();
 
-
 const gameContainer = document.getElementById("gameContainer");
 const gameCanvas = document.getElementById("gameCanvas");
 const ctx = gameCanvas.getContext("2d");
-
 
 document.body.addEventListener("dblclick", function(e) {
     if (e.target.classList.contains("note") && e.target.innerText === ".snake") {
@@ -104,7 +102,6 @@ document.body.addEventListener("dblclick", function(e) {
     }
 });
 
-    // THE SNAKE GAME ISNT MY CODE
 
 function startSnakeGame() {
     const canvas = document.getElementById("gameCanvas");
